@@ -1,27 +1,127 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>novo teste</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://cdn.maptiler.com/tileviewer/v1/index.css" type="text/css"/>
-    <script src="https://cdn.maptiler.com/tileviewer/v1/index.js"></script>
-  </head>
-  <body>
-    <script type="text/javascript">
-      // var GOOGLEMAPS_KEY = 'YOUR-API-KEY';
-      var data = {
-        "name": "novo teste",
-        "version": "1.0.0",
-        "description": "",
-        "type": "overlay",
-        "format": "png",
-        "minzoom": "14",
-        "maxzoom": "19",
-        "bounds": "-51.20721200,-0.01954622,-51.19553098,-0.00817500",
-        "scale": "1.000000",
-        "profile": "mercator"
-      };
-      tileserver(data);
-    </script>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ortofotos SETRAP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 22px;
+      text-decoration: none;
+      color: white;
+      border: 1px solid #334155;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      background: #243449;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: #0369a1;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ORTOFOTOS SETRAP</h1>
+    <p>Visualização remota de ortofotos geradas por drone</p>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+
+      <a class="card" href="leaflet.html">
+        <h2>📍 Ramal Ponte do Matapi</h2>
+        <p>Ortofoto de drone para visualização, navegação e análise remota.</p>
+        <span class="tag">Abrir mapa</span>
+      </a>
+
+      <a class="card" href="#">
+        <h2>📍 AP-160</h2>
+        <p>Área reservada para futura ortofoto da rodovia AP-160.</p>
+        <span class="tag">Em breve</span>
+      </a>
+
+      <a class="card" href="#">
+        <h2>📍 AP-440</h2>
+        <p>Área reservada para futura ortofoto da rodovia AP-440.</p>
+        <span class="tag">Em breve</span>
+      </a>
+
+      <a class="card" href="#">
+        <h2>📍 Ponte do Anauerapucu</h2>
+        <p>Área reservada para futura ortofoto da ponte e entorno.</p>
+        <span class="tag">Em breve</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    Secretaria de Estado de Transportes — SETRAP/AP
+  </footer>
+</body>
 </html>
